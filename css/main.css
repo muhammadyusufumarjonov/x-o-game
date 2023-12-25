@@ -1,0 +1,135 @@
+@import url("https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Permanent Marker";
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  gap: 40px;
+  background-color: yellow;
+}
+
+.game {
+  width: 320px;
+  height: 320px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+.game .pos {
+  width: 100px;
+  height: 100px;
+  background-color: black;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 60px;
+  font-weight: 700;
+  color: yellow;
+  cursor: pointer;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+  border: 5px solid black;
+  transition: 0.25s ease-in-out;
+}
+.game .pos:hover {
+  background-color: yellow;
+  color: black;
+}
+
+.reset {
+  background-color: #000;
+  color: yellow;
+  padding: 10px 20px;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+  font-size: 40px;
+  transition: 0.15s ease-in-out;
+  animation: around 2s ease-in-out infinite;
+}
+.reset:hover {
+  background-color: red;
+  color: #000;
+  box-shadow: 2px 20px 20px 5px #010100;
+}
+
+@keyframes around {
+  0% {
+    transform: rotate(0deg);
+  }
+  25% {
+    transform: rotate(5deg);
+  }
+  50% {
+    transform: rotate(8deg);
+  }
+  55% {
+    transform: rotate(-5deg);
+  }
+  60% {
+    transform: rotate(-8deg);
+  }
+  65% {
+    transform: rotate(5deg);
+  }
+  70% {
+    transform: rotate(8deg);
+  }
+  75% {
+    transform: rotate(-5deg);
+  }
+  80% {
+    transform: rotate(-8deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+marquee {
+  height: 50px;
+  margin-top: -200px;
+  background-color: black;
+  color: yellow;
+  font-size: 30px;
+  margin-bottom: 100px;
+  text-transform: uppercase;
+}
+
+.marquee-sc {
+  position: relative;
+  top: 340px;
+}
+
+.marquee-rd {
+  position: fixed;
+  transform: rotate(90deg);
+  margin-top: 130px;
+  margin-left: 900px;
+  z-index: -1;
+}
+
+.marquee-th {
+  position: fixed;
+  transform: rotate(90deg);
+  margin-top: 130px;
+  margin-right: 900px;
+  z-index: -1;
+}
+
+img {
+  width: 10px;
+  margin-left: 20px;
+  margin-right: 20px;
+}
